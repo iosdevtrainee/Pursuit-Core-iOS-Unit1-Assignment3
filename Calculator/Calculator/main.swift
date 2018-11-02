@@ -14,8 +14,8 @@ repeat {
   let option = Util.getUserInput(message:"Would you like to play (random), (calculator), or (high order)")
   switch option {
   case "high order":
-    let response = Util.getUserInput(message: "Enter a operation i.e. filter 1,2,3,4,5 by < 6")
-    let highOrderTuple = Util.acceptHighOrderInput(message: response,
+//    let response = Util.getUserInput(message: "Enter a operation i.e. filter 1,2,3,4,5 by < 6")
+    let highOrderTuple = Util.acceptHighOrderInput(message: "Enter a operation i.e. filter 1,2,3,4,5 by < 6",
                                               errorMessage: "Please try another correctly formatted high order operation")
     if highOrderTuple?.operation == .map {
       guard let result = Util.handleMap(op: (highOrderTuple?.Operator)!,
