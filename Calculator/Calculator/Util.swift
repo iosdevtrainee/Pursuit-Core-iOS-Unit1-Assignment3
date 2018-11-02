@@ -85,14 +85,9 @@ class Util {
       return (operation:operation,array:arrayOfInts,Operator:Operator,param:param)
   }
   
-  static func acceptCalculationInput(message:String, errorMessage:String) ->
+  static func acceptCalculationInput(input:String, errorMessage:String) ->
     (numberOne:Double,numberTwo:Double, op:Operators)? {
-      print(message)
-      let input = readLine()
-      guard let inputArray = input?.components(separatedBy: " ") else {
-        print(errorMessage)
-        return nil
-      }
+      let inputArray = input.components(separatedBy: " ")
       guard let num1 = Double(inputArray[0]) else {
         print(errorMessage)
         return nil
